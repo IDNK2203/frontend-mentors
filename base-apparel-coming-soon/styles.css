@@ -1,0 +1,181 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root{
+/* ### Primary */
+
+--Desaturated-Red: hsl(0, 36%, 70%);
+--Soft-Red: hsl(0, 93%, 68%);
+
+/* ### Neutral */
+
+--Dark-Red: hsl(0, 6%, 24%);
+
+/* ### Gradients */
+
+/* --Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+--Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)  */
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 10px;
+    font-family: "Josefin Sans" , sans-serif;
+}
+.grid{
+    display: grid;
+    grid-template-columns:1fr .7fr;
+    grid-auto-rows:100vh;
+}
+.right{
+    grid-area: 1/2/2/3;
+    background: url(images/hero-desktop.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.left{
+    grid-area: 1/1/2/2;
+    background: url(images/bg-pattern-desktop.svg);
+    background-size: cover;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 50rem;
+    padding: 3rem ;
+}
+.header-logo{
+    margin:3rem 0;
+}
+.text-con{
+    padding: 2rem 0;
+    transform: translateY(10%);
+}
+.text-con h1{
+    font-size: 5rem;
+    padding: 2rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1.4rem;
+    line-height: 1.1;
+    color: var(--Desaturated-Red);
+    font-weight:300;
+}
+.text-con span{
+    display: block;
+    color:var(--Dark-Red);
+    font-weight:600;
+}
+.text-con p{
+    font-size: 1.45rem;
+    padding: 2rem 0;
+    word-spacing: .25rem;
+    line-height: 1.45;
+    color: var(--Desaturated-Red);
+}
+form{
+    padding: 2rem 0;
+    position: relative;
+}
+form input{
+    width: 100%;
+    padding: 1.45rem 2rem;
+    padding-right: 4rem;
+    border-radius: 22px;
+    background-color: transparent;
+    color: var(--Desaturated-Red);
+    font-family: inherit;
+    border: 1px solid var(--Desaturated-Red) ;
+}
+form input:focus{
+    outline: 2.5px dashed var(--Desaturated-Red);    
+}
+form input::placeholder{
+    color: var(--Desaturated-Red);
+}
+form button{
+    padding: 1.15rem 3.5rem;
+    position: absolute;
+    right: 0;
+    top: 19px;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    background-image:linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%)) ;
+}
+form button:focus{
+    outline: none;
+}
+form button:hover{
+    background-image:linear-gradient( 135deg  ,hsl(0, 89%, 93%), hsl(0, 60%, 85%)) ;    
+    box-shadow: 0px 4px 12px var(--Desaturated-Red);
+}
+.error-msg{
+    color: var(--Soft-Red);
+    padding: 1rem 2rem;
+    position: absolute;
+    display: none;
+}
+.error-icon{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 70%;
+}
+.error-icon img{
+    display: none;       
+}
+form input:invalid:focus ~ .error-icon img{
+    display: block;       
+}
+form input:required:focus{
+    border: 1px solid var(--Soft-Red) ;
+    outline: none;
+}
+.mobile-logo{                     
+    display: none;
+}
+@media (max-width:700px) {
+    .grid{
+        display: grid;
+        grid-template-columns:1fr;
+        /* grid-auto-rows:8rem .6fr 1fr; */
+        grid-auto-rows:8rem minmax(250px ,.6fr) 1fr;
+    }
+    .header-logo{
+        display: none;
+    }
+    .mobile-logo{
+        display:block;
+        grid-area: 1/1/2/2;
+        background: url(images/bg-pattern-desktop.svg);
+    }
+    .right{
+        grid-area: 2/1/3/2;
+        background: url(images/hero-mobile.jpg);
+        /* background-position:  center; */
+        background-size: cover;
+    }
+    .left{
+        grid-area: 3/1/4/2;
+        background: url(images/bg-pattern-desktop.svg);
+        background-size: cover;
+        padding-bottom: 3rem ; 
+    }
+    form button{
+        padding: 1.15rem 2.5rem;
+    }
+    .text-con h1{
+        text-align: center;
+        font-size: 4rem;
+    }
+    .text-con{
+        transform: translateY(0%);
+    }
+    .container{
+        padding: 2rem ;
+    }
+}
