@@ -1,0 +1,170 @@
+
+.dashboard{
+  position: relative;
+
+}
+.dashboard::before{
+  position:absolute;
+  content: "";
+  width: 100%;
+  height: 35%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background:rgb(128, 4, 0);
+}
+body.dark_theme{
+  .dashboard::before{
+    background: $Very-Dark-Blue;
+  }  
+}
+
+body.light_theme{
+  .dashboard::before{
+    background:$Very-Pale-Blue
+  }  
+}
+
+
+.heading_section {
+  margin: 1rem 0;
+  font-weight: $regular-400; 
+  .heading {
+    margin: 1rem 0;
+    padding: .5rem 0;
+    border-bottom: 1px solid  $Desaturated-Blue;
+    h2{
+      font-size: 1.65rem;
+    }
+    p{
+      padding: .5rem 0 1rem;
+      font-size: .9rem;
+      font-weight: $bold-700;
+    }
+  }
+  .controls {
+    @include flex;
+    label{
+      font-weight: $bold-700;
+    }
+  }
+  @include mQ($tablet){
+    @include flex;
+    .heading {
+      border-bottom:none ;
+      margin: 0;
+      h2{
+        font-size: 2rem;
+      }
+    }
+    label{
+      padding-right: 1rem;
+    }
+  }
+
+}
+
+// metrics section
+.metrics_cards {
+  margin: 1rem 0 2rem;
+  padding: 1rem 0;
+  text-align: center;
+
+    @include mQ( $tablet){
+      @include grid(4){
+        grid-gap:1rem ;
+      } 
+    }
+  .metrics_card {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.25);
+  }
+  .facebook {
+    @include border_top($Facebook);
+  }
+  .twitter {
+    @include border_top($Twitter);
+  }
+  .instagram {
+    border-width: 5px;
+    border-style: solid;
+    border-image: $Instagram 1 0 0 0;
+  }
+  .youtube {
+    @include border_top($YouTube);
+  }
+}
+
+.username , .current_value{
+  @include flex;
+  justify-content: center;
+}
+.username {
+  padding: 1rem 0 0 0;
+  .user{
+    font-weight: $bold-700;
+    font-size: .85rem;
+    padding-left: 1rem;
+  }
+
+}
+.follower_info {
+  padding: 1.75rem 0;
+  .follower_value{
+    font-size: 4rem;
+  }
+  .follower_text{
+    letter-spacing: .3rem;
+    font-weight: $regular-400;
+    text-transform: uppercase;
+    font-size: .9rem;
+  }
+
+}
+.current_value{
+  padding: .5rem 0; 
+  span{
+    padding-left: .5rem;
+  }
+}
+
+// overview_section
+
+.overview_dimensions {
+  margin: 0rem 0 1rem;
+  padding: 1rem 0;
+
+  @include mQ( $tablet){
+    @include grid(4){
+      grid-gap:1rem ;
+    }  
+  }
+}
+.dimension {
+  border-radius: 3px;
+  margin: .75rem 0;
+  padding: 1rem ;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.25);
+  .dimension_content {
+    padding: 0.5rem 0;
+    @include flex;
+    .demonsion_value{
+      font-size: 2.25rem;
+    }
+  }
+  .dimensiion_heading {
+    padding: 0.5rem 0;
+    @include flex;
+    p{
+      font-weight: $bold-700; 
+    }
+  }
+  .percentage{
+    @include flex;
+    justify-content: center;
+    span{
+      padding-left: .5rem;
+    }
+  }
+}

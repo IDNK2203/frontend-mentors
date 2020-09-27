@@ -1,0 +1,48 @@
+.underlay{
+  position: absolute;
+  width: 10%;
+  height: 5%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: $Toggle-dark;
+  transition: all 0.4 ease-in-out;
+  position: relative;
+  padding: .25rem;
+  box-shadow: inset -2px -2px 6px 0px rgba(0,0,0,0.75);
+}
+
+input[type="checkbox"]:focus {
+  outline:2px dotted grey;
+}
+
+input[type="checkbox"]::before {
+  content: " ";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background: $Very-Dark-Blue;
+  border-radius: 8px;
+  top: 4px;
+  left: 8%;
+  transition: all 0.4s ease-out;
+}
+input[type="checkbox"]:checked {
+  background: $Toggle-light;
+  transition: all 0.4s ease-out;
+  box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.55);
+
+}
+input[type="checkbox"]:checked::before {
+  left: 50%;
+  background: $White;
+  transition: all 0.4s ease-out;
+}

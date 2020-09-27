@@ -1,0 +1,70 @@
+// ## Colors
+
+// ### Primary
+
+$Lime-Green: hsl(163, 72%, 41%);
+$Bright-Red: hsl(356, 69%, 56%);
+
+// social media icon
+
+$Facebook: hsl(208, 92%, 53%);
+$Twitter: hsl(203, 89%, 53%);
+$Instagram: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$YouTube: hsl(348, 97%, 39%);
+
+// #### Dark Theme
+
+$Toggle-dark: linear-gradient( 90deg ,hsl(210, 78%, 56%) , hsl(146, 68%, 55%));
+
+// #### Light Theme
+
+$Toggle-light: hsl(230, 22%, 74%);
+
+// ### Neutral
+
+// #### Dark Theme
+
+//  (BG)
+$Very-Dark-Blue: hsl(230, 17%, 14%);
+//   (Top BG Pattern):
+$Very-Dark-Blue: hsl(232, 19%, 15%);
+//  (Card BG):
+$Dark-Desaturated-Blue: hsl(228, 28%, 20%);
+//  (Text)
+$Desaturated-Blue: hsl(228, 34%, 66%);
+//  (Text)
+$White: hsl(0, 0%, 100%);
+
+// #### Light Theme
+
+//  (BG)
+$White: hsl(0, 0%, 100%);
+// (Top BG Pattern)
+$Very-Pale-Blue: hsl(225, 100%, 98%);
+// Blue (Card BG)
+$Light-Grayish: hsl(227, 47%, 96%);
+//  (Text)
+$Dark-Grayish-Blue: hsl(228, 12%, 44%);
+// (Text)
+$Very-Dark-Blue: hsl(230, 17%, 14%);
+
+// ## Typography
+
+// ### Body Copy
+
+// (Overview Card Headings)
+$font-size: 14px;
+
+// ### Font
+
+// family
+$font-Inter: "Inter", sans-serif;
+
+// Weights
+$thin-100 :100;
+$regular-400: 400;
+$bold-700: 700;
+
+// breakpoints 
+$tablet:768px;
+$laptop:1024px;

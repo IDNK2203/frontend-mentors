@@ -1,0 +1,11 @@
+@import "./variables";
+
+@import "./base"; // resets, variables, mixins, and any utility classes.
+
+@import "./theme"  ;
+
+@import "./component" ; // reusable such as buttons, navbars, cards etc.
+
+@import "./layout" ; // contains all layout settings
+
+

@@ -1,0 +1,66 @@
+// # Front-end Style Guide
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap');;
+
+// mixins
+@mixin border_top($color) {
+  border-top: 5px solid $color;
+  border-radius: 3px;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+@mixin mQ($breakpoint) {
+  @media screen and(min-width:$breakpoint) {
+    @content;
+  }
+   
+}
+
+@mixin grid($cols) {
+  display: grid;
+  grid-template-columns:repeat($cols , 1fr) ;  
+  @content;
+}
+
+
+// base
+
+.increase {
+  color: $Lime-Green;
+  font-size:.825rem;
+}
+.decrease{
+  color: $Bright-Red;
+  font-size:.825rem; 
+}
+
+// resets
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+:root {
+  font-family: $font-Inter;
+  font-size: $font-size;
+}
+ul {
+  list-style-type: none;
+}
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+section {
+  padding: 2rem 0;
+}
