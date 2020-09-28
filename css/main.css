@@ -72,15 +72,6 @@ section {
   background: #800400;
 }
 
-.underlay {
-  position: absolute;
-  width: 10%;
-  height: 5%;
-  left: 0;
-  top: 0;
-  z-index: 1;
-}
-
 input[type="checkbox"] {
   appearance: none;
   width: 44px;
@@ -89,7 +80,7 @@ input[type="checkbox"] {
   background: linear-gradient(90deg, #378fe6, #3eda82);
   transition: all 0.4 ease-in-out;
   position: relative;
-  padding: .25rem;
+  padding: 0.25rem;
   box-shadow: inset -2px -2px 6px 0px rgba(0, 0, 0, 0.75);
 }
 

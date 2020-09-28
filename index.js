@@ -1,8 +1,5 @@
-console.log("butt stains");
-// let underlay = document.querySelector(".underlay");
 let toggle_switch = document.querySelector("#toggle_switch");
-// let dashboard = document.querySelector(".dashboard");
-let body = document.querySelector("body")
+let body = document.querySelector("body");
 let heading_para = document.querySelector(".heading p");
 let label = document.querySelector("label");
 let metrics_card = Array.from(document.querySelectorAll(".metrics_card"));
@@ -13,7 +10,6 @@ let dimensiion_paras = Array.from(
   document.querySelectorAll(".dimensiion_heading p")
 );
 
-// console.log(underlay)
 let label_toggle = (e) => {
   if (e.target.checked) {
     label.textContent = "Light Mode";
@@ -35,11 +31,6 @@ toggle_switch.addEventListener("click", (e) => {
   // label
   label.classList.toggle("dark_theme_cardtext");
   label.classList.toggle("light_theme_cardtext");
-
-  // underlay
-  // underlay.classList.toggle("dark_theme_underlay");
-  // underlay.classList.toggle("light_theme_underlay");
-
   // metrics_card
   metrics_card.forEach((card) => {
     card.classList.toggle("dark_theme_card");
