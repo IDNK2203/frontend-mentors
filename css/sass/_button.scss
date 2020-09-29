@@ -1,0 +1,23 @@
+
+.btn{
+  padding: 1rem;
+  cursor: pointer;
+  border-radius:3px ; 
+  color: white;
+  border:none;
+  font-size: .8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .05rem;
+  font-family: inherit;
+  outline: none;
+  &:hover{
+    opacity: .8;
+  }
+}
+.btn--primary{
+  background: $Green;
+  box-shadow: -1px 4px 0px 0px rgba(4, 128, 24, 0.63) ,
+  ;
+
+}

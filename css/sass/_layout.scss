@@ -1,0 +1,43 @@
+.sign-up-section {
+  background: $Red  url(../../images/bg-intro-mobile.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat ;
+  height: 100%;
+  color: white;
+  padding: 1rem 0 2rem;
+  @include mQ(768px){
+    background: $Red  url(../../images/bg-intro-desktop.png);
+    height: 100vh;
+      .container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2rem;
+      & > *{
+        align-self: center;
+        justify-self: center;
+      }
+    }
+  }
+}
+
+.sales-pitch{
+  text-align: center;
+  padding: 2rem 0;
+  margin: 1rem 0;
+  &__p{
+    font-size: .9rem;
+    margin:1rem 0 0;
+  }
+  @include mQ(768px){
+    text-align: left;
+    &__h2{
+      font-size: 3rem;
+    }
+    &__p{
+    font-size: 1rem;
+    }
+
+  }
+
+}

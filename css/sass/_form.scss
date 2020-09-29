@@ -1,0 +1,39 @@
+
+
+.trial-form{
+  padding: 1rem;
+  border-radius: 6px; 
+  background:white;
+  &__item{
+    margin: 1rem 0;
+  }
+  &__input{
+    width: 100%;
+    padding:.85rem 1rem ;
+    border-radius:3px ;
+    border:1px solid $Grayish-Blue;
+    font-weight: 700;
+    &::placeholder{
+      font-weight: 700;
+    }
+    &:focus{
+      outline: none;
+      border: 1px solid $Dark-Blue;
+    }
+  }
+  .btn{
+    width: 100%;
+  }
+  @include mQ(768px){
+    border-radius: 10px;
+    padding: 2rem;
+    &__item{
+      margin: 1.35rem 0;
+    }
+    &__input{
+      padding: 1rem ;
+      border-radius:5px ;
+      font-weight: 700;
+    }
+  }
+}
