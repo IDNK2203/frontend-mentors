@@ -16,7 +16,7 @@
     &-text--bold{
       font-weight: 700;
     }
-  }
+  }      
   @include mQ(768px){
     width:100%;
     &__notification{

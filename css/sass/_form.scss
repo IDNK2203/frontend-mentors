@@ -6,19 +6,43 @@
   background:white;
   &__item{
     margin: 1rem 0;
+    position :relative;
   }
   &__input{
     width: 100%;
     padding:.85rem 1rem ;
+    padding-right: 3rem;
     border-radius:3px ;
     border:1px solid $Grayish-Blue;
     font-weight: 700;
+    color:$Dark-Blue;
     &::placeholder{
       font-weight: 700;
     }
     &:focus{
       outline: none;
       border: 1px solid $Dark-Blue;
+    }
+  }
+  .trial-form__err-msg{
+    font-size: .75rem;
+    font-weight: 700;
+    color:$Red;
+    text-align: right;
+    width: 100%;
+    padding: .25rem .5rem ;
+
+  }
+  &__indicator{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    display: none;
+  }
+  &__input:focus:invalid{
+    border:2px solid $Red;
+    & ~   .trial-form__indicator{
+      display: block;
     }
   }
   .btn{
