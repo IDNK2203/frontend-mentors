@@ -1,10 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
-@import "./variables";
+// base style
+@import "./base/variables";
 
-@import "./base" ;
+@import "./base/mixins";
 
-@import "./components" ;
+@import "./base/base" ;
 
-@import "./layout" ; 
- 
+// components styles
+@import "./components/button";
+
+@import "./components/nav";
+
+@import "./components/form";
+
+// layout styles
+@import "./layout/layouts" ; 
+
+@import "./layout/header" ; 
+
+@import "./layout/footer" ; 

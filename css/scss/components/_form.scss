@@ -1,0 +1,62 @@
+.shorten-url-form{
+  padding: 1rem;
+  border-radius: 6px; 
+  background: $Dark-Violet url(../../images/bg-shorten-mobile.svg);
+  background-size: contain;
+  background-position: 100% 0;
+  background-repeat: no-repeat ;
+  &__item{
+    position :relative;
+  }
+  &__input{
+    position: relative;
+    width: 100%;
+    font-size:.9rem ;
+    padding:.85rem 1rem ;
+    padding-right: 3rem;
+    border-radius:5px ;
+    border:none;
+    font-weight: 700;
+    color:$Dark-Violet;
+    &::placeholder{
+      font-weight: 700;
+    }
+    &:focus{
+      outline: none;
+      border: 1px solid $Very-Dark-Blue;
+    }
+  }
+    &__err-msg{
+    bottom:-1rem;
+    font-size: .75rem;
+    font-weight: 700;
+    color:$Red;
+    text-align: left;
+    width: 100%;
+    padding: .25rem .5rem ;
+      @include mQ_desktop{
+        position:absolute;
+        left:0; 
+      }
+  }
+  &__input:focus:invalid{
+    border:4px solid $Red;
+  }
+  .btn{
+    width: 100%;
+  }
+  @include mQ_desktop{
+    padding:2rem;
+    @include flex;
+    background: $Dark-Violet url(../../images/bg-shorten-desktop.svg);
+    background-size: cover;
+    background-position:40% 50%;
+    &__item{
+      flex: .9 1;
+      padding-right: 3rem;
+    }
+    .btn{
+      width: auto;
+    }
+  }
+}

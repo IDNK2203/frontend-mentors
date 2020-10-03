@@ -75,36 +75,37 @@ const isValidURL = str => {
 };
 
 async function shortenInput(input) {
-    // prevent empty input
-    if (input === "") {
-        error = "Please add a link";
-        addError(error);
-        return;
-    }
-    // if input is not a valid url
-    if (!isValidURL(input)) {
-        error = "Please add a valid link, dude";
-        addError(error);
-        return;
-    }
-    // api call
-    try {
-        const options = {
-            method: "POST",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ url: input })
-        };
-        const response = await fetch("https://rel.ink/api/links/", options);
-        const data = await response.json();
-        makeShorterLink(input, data.hashid);
-    } catch (err) {
-        console.log(err);
-        error = "Sorry, an error occurred, please try again";
-        addError(error);
-    }
+	// prevent empty input
+	if (input === "") {
+		error = "Please add a link";
+		addError(error);
+		return;
+	}
+	// if input is not a valid url
+	if (!isValidURL(input)) {
+		error = "Please add a valid link, dude";
+		addError(error);
+		return;
+	}
+	// api call
+	try {
+		const options = {
+				method: "POST",
+				headers: {
+						Accept: "application/json",
+						"Content-Type": "application/json"
+				},
+				body: JSON.stringify({ url: input })
+		};
+		const response = await fetch("https://rel.ink/api/links/", options);
+		const data = await response.json();
+		makeShorterLink(input, data.hashid);
+	} 
+	catch (err) {
+		console.log(err);
+		error = "Sorry, an error occurred, please try again";
+		addError(error);
+	}
 }
 
 // 1/ create short link
