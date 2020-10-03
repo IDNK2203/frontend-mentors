@@ -1,0 +1,61 @@
+.nav--primary {
+  padding: 1rem;
+  text-align: center;
+  width: 90%;
+  border-radius: 10px;
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $Dark-Violet;
+  .nav__list--user-auth {
+    border-top: 0.05rem solid white;
+  }
+  .nav__item {
+    padding: 0.75rem;
+    color: white;
+    font-weight: 700;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  .nav__link--sign-up {
+    display: block;
+    border-radius: 28px;
+  }
+  @include mQ_desktop{
+    padding: 0rem ;
+    padding-left: 1rem;
+    @include flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-grow: 1;
+    text-align: center;
+    width: auto;
+    border-radius: 0;
+    position: static;
+    transform: translateX(0);
+    background-color: transparent;
+    .hidden{
+      display: flex;
+    }
+    .nav__list{
+      @include flex;
+    }
+    .nav__list--user-auth {
+      border-top: none;
+    }
+    .nav__item {
+      padding-bottom: 1.25rem;
+      color: $Gray;
+      &:hover {
+        color:$Dark-Violet;
+      }
+    }
+    .nav__link--sign-up {
+      padding-left:2rem ;
+      padding-right: 2rem;
+    }
+  }
+
+}

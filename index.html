@@ -73,18 +73,26 @@
     </main>
     <section class="shorten-url">
       <div class="container">
-        <form method="POST" action="#" novalidate class="shorten-url-form">
-          <p class="shorten-url-form__item">
-            <input
-              class="shorten-url-form__input"
-              type="text"
-              name="link "
-              placeholder="shorten a link here..."
-            />
-            <small class="shorten-url-form__err-msg"></small>
-          </p>
-          <button type="submit" class="btn btn--primary">Shorten It!</button>
-        </form>
+        <div class="translate-container">
+          <form method="POST" action="#" novalidate class="shorten-url-form">
+            <p class="shorten-url-form__item">
+              <input
+                class="shorten-url-form__input"
+                type="url"
+                pattern="https?://.+" 
+                name="link"
+                required
+                placeholder="shorten a link here..."
+              />
+              <small class="shorten-url-form__err-msg"></small>
+            </p>
+            <button type="submit" class="btn btn--primary">Shorten It!</button>
+          </form>
+          <div class="report ">
+            <ul class="report__list">
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -223,5 +231,5 @@
       </div>
     </footer>
   </body>
-  <script src="./index.js"></script>
+  <script defer src="./index.js"></script>
 </html>

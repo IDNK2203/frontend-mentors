@@ -1,0 +1,203 @@
+.main{
+  margin-bottom: 4rem;
+  @include mQ_desktop{
+    .container{
+      @include flex;
+      padding-bottom: 4rem;
+      flex-direction: row-reverse;
+    }
+    &__intro-text{
+      text-align:left;
+      max-width: 22.5rem;
+    }
+    &__headline{
+      font-size: 2.5rem;
+    }
+  }
+  @include mQ_desktop_large{
+    @include mQ_desktop{
+      &__intro-text{
+        text-align:left;
+        max-width: 25rem;
+      }
+      &__headline{
+        font-size: 3rem;
+      }
+    }
+  }
+}
+.cta-holder{
+  margin:1rem 0;
+  .btn{
+    padding: 1rem 2rem ;
+    border-radius:28px;
+  }
+}
+
+.shorten-url , .stats{
+  background:lighten($color:$Gray , $amount: 22) ;
+  padding: 1rem 0;
+}
+.shorten-url .container{
+  padding-bottom: 0;
+}
+.stats{
+  padding-top: 0;
+  .container{
+  padding-top: 0;
+  }
+}
+
+.translate-container {
+  transform: translateY(-4.75rem);
+}
+.report{
+  &__output-link{
+    color:$Cyan;
+  }
+  &__input-link{
+    color:$Dark-Violet;
+    // word-break: word;
+  }
+  &__output-link , &__input-link{
+    font-size: .825rem;
+  }
+  &__input-url , &__output-url{
+    padding: .75rem 0;
+    text-align: left;
+  }
+  &__input-url{
+    border-bottom: 1px solid $Dark-Violet;
+      padding: 0 1rem .75rem; 
+  }
+  &__output-panel{
+    padding: 0 1rem; 
+  }
+  &__list{
+    .btn{
+      width: 100%;
+      padding: .775rem 1rem;
+    }
+
+    & > *{
+    background: white;
+     border-radius: 5px;
+    width: 100%;
+    padding: 1rem 0;
+    margin:  1rem 0;
+    box-shadow: 3px 3px 6px rgba($color: #000000, $alpha: .2);
+    }    
+  }
+  @include mQ_desktop{
+    &__input-url , &__output-url{
+      padding: .75rem ;
+    }
+    &__input-url{
+      border-bottom:none;
+      padding: .75rem 1rem; 
+      max-width:50%;
+    }
+    &__output-panel{
+      @include flex;
+      padding: 0 1rem;
+    }
+    &__list{
+      .btn{
+        padding: .6rem 1rem;
+      }
+
+      & > *{
+      @include flex;
+      padding: .75rem 0;
+      }    
+    }
+  }
+}
+.stats{
+  p{
+    font-size:.85rem;
+  }
+  .benefits{
+    background: #f7f7f7;
+    position: relative;
+    padding: 1rem 0;
+    // &__item:not(:first-child)::before{
+    //   content: "";
+    //   position: absolute;
+    //   width:.5rem;
+    //   height:4.15rem;
+    //   bottom: 100%;
+    //   background: $Cyan;
+    //   z-index: -1;
+    // }
+    &__item{
+      position: relative; 
+      background: white;
+      margin: 4rem 0 1rem;
+      padding: 1rem;
+      box-shadow: 3px 3px 6px rgba($color: #000000, $alpha: .2);
+    }
+    &__icon-holder{
+      position: absolute; 
+      top:-2rem;
+      background-color:$Dark-Violet;
+      transform: translateX(-50%);
+      left: 50%;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      padding:16px;
+    }
+    &__headline{
+      max-width: 25rem;
+      margin: 2rem auto 0;
+    }
+  }
+  @include mQ_desktop {
+    .benefits{
+      height: 22.5rem;
+      @include grid (3);
+      &__item{
+        margin: 2rem 0 1rem;
+        align-self: center;
+        text-align: left;
+        &:nth-of-type(1){
+          align-self: start;
+          // &::before{
+          //   content: "";
+          //   position: relative;
+          //   width:90%;
+          //   height:.5rem;
+          //   // bottom: 50%;
+          //   background: $Cyan;
+          //   z-index: 2;
+          // }
+        }
+        &:nth-of-type(3){
+          align-self: end;
+        }
+      }      
+    }
+  }   
+
+}
+
+// cta banner
+
+.cta-banner{
+  padding: 1rem 0;
+  background: $Dark-Violet url(../../images/bg-boost-desktop.svg);
+  background-size: cover;
+  background-position: 100% center ;
+  background-repeat: no-repeat ;
+  color:white; 
+  &__headline{
+    padding: 1rem 0;
+    color:white; 
+  }
+  @include mQ_desktop_large {
+    &__headline{
+      font-size: 2.5rem;
+    }
+  }
+}
